@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:PersonalFinanceTracker.Converters"
+             x:Class="PersonalFinanceTracker.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:IncomeToColorConverter x:Key="IncomeToColorConverter" />
+            <converters:ProgressToColorConverter x:Key="ProgressToColorConverter" />
+            <converters:ProgressConverter x:Key="ProgressConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

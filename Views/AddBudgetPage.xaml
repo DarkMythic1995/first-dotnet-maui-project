@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PersonalFinanceTracker.ViewModels"
+             x:Class="PersonalFinanceTracker.Views.AddBudgetPage"
+             x:DataType="vm:AddBudgetViewModel"
+             Title="Add Budget">
+    <Grid RowDefinitions="100,Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*,*"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
+        <Image Grid.ColumnSpan="2" 
+               Source="dotnet_bot.png" 
+               BackgroundColor="Transparent" />
+        <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Category" FontAttributes="Bold" />
+        <Picker Grid.Row="2" Grid.ColumnSpan="2" 
+                ItemsSource="{Binding Categories}" 
+                SelectedItem="{Binding Budget.Category, Mode=TwoWay}" 
+                Title="Select category" />
+        <Label Grid.Row="3" Grid.ColumnSpan="2" Text="Amount" FontAttributes="Bold" />
+        <Entry Grid.Row="4" Grid.ColumnSpan="2" 
+               Text="{Binding Budget.Amount, Mode=TwoWay}" 
+               Keyboard="Numeric" 
+               Placeholder="Enter budget amount" />
+        <Label Grid.Row="5" Grid.ColumnSpan="2" Text="Month" FontAttributes="Bold" />
+        <DatePicker Grid.Row="6" Grid.ColumnSpan="2" 
+                    Date="{Binding Budget.Month, Mode=TwoWay}" 
+                    Format="MMMM yyyy" />
+        <Button Grid.Row="7" Text="Save" Command="{Binding SaveCommand}" />
+        <Button Grid.Row="7" Grid.Column="1" Text="Cancel" Command="{Binding CancelCommand}" />
+    </Grid>
+</ContentPage>
