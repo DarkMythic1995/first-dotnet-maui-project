@@ -26,9 +26,6 @@ Here is a link to my YouTube to show a walkthrough:
 - **SQLite-net-pcl**: For local database management.
 - **SkiaSharp**: For custom chart rendering in reports.
 
-## Contributing
-Feel free to fork this repository, make improvements, and submit pull requests. Issues and suggestions are welcome!
-
 ## License
 [MIT License]
 
