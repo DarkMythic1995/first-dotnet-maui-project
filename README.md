@@ -33,4 +33,4 @@ Feel free to fork this repository, make improvements, and submit pull requests. 
 [MIT License]
 
 ## Acknowledgments
-- Thanks to the xAI community, Codecademy, and other resources for guidance during the development of this project.
+- Thanks to my instructor Brent Presley, the xAI community, Codecademy, and other resources for guidance during the development of this project.
