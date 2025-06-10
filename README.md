@@ -1,7 +1,7 @@
 # Personal Finance Tracker - Week 1 Intro to Mobile class.
 
 ## Overview
-I created this Personal Finance Tracking application for my Intro to Mobile class, it's a .NET MAUI application designed to help users manage their finances by tracking transactions and budgets. The goal is for it to feature a user-friendly interface to add transactions and budgets, view detailed reports with custom charts, and navigate between pages seamlessly.
+I created this Personal Finance Tracking application for this Intro to Mobile class I am taking this summer at MSTC, it's a .NET MAUI application designed to help users manage their finances by tracking transactions and budgets. The goal is for it to feature a user-friendly interface to add transactions and budgets, view detailed reports with custom charts, and navigate between pages seamlessly.
 
 ## Features
 - Add and manage transactions (income and expenses) with categories and notes.
