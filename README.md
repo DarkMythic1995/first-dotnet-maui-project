@@ -30,4 +30,4 @@ Here is a link to my YouTube to show a walkthrough:
 [MIT License]
 
 ## Acknowledgments
-- Thanks to my instructor Brent Presley, the xAI community, Codecademy, and other resources for guidance during the development of this project.
+- Thanks to my instructor Brent Presley at Mid-State Technical College, the xAI community, Codecademy, and other resources for guidance during the development of this project.
