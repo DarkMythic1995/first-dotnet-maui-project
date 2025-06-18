@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:PersonalFinanceTracker.Views"
+       xmlns:root="clr-namespace:PersonalFinanceTracker"
+       x:Class="PersonalFinanceTracker.AppShell">
+    <ShellContent Title="Home"
+                  ContentTemplate="{DataTemplate root:MainPage}"
+                  Route="MainPage" />
+    <ShellContent Title="Add Transaction"
+                  ContentTemplate="{DataTemplate views:AddTransactionPage}"
+                  Route="AddTransactionPage" />
+    <ShellContent Title="Add Budget"
+                  ContentTemplate="{DataTemplate views:AddBudgetPage}"
+                  Route="AddBudgetPage" />
+    <ShellContent Title="Reports"
+                  ContentTemplate="{DataTemplate views:ReportsPage}"
+                  Route="ReportsPage" />
+    <ShellContent Title="Details"
+                  ContentTemplate="{DataTemplate views:DetailPage}"
+                  Route="DetailPage" />
+    <ShellContent Title="Edit Transaction"
+                  ContentTemplate="{DataTemplate views:EditTransactionPage}"
+                  Route="EditTransactionPage" />
+</Shell>
