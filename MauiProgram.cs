@@ -41,17 +41,21 @@ namespace PersonalFinanceTracker
             builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
             builder.Services.AddSingleton<DataService>();
 
-            // Register pages and ViewModels
-            builder.Services.AddSingleton<MainPage>();
+            // Register view models
             builder.Services.AddSingleton<MainViewModel>();
-            builder.Services.AddTransient<AddTransactionPage>();
             builder.Services.AddTransient<AddTransactionViewModel>();
-            builder.Services.AddTransient<AddBudgetPage>();
             builder.Services.AddTransient<AddBudgetViewModel>();
-            builder.Services.AddTransient<ReportsPage>();
             builder.Services.AddTransient<ReportsViewModel>();
-            builder.Services.AddTransient<DetailPage>();
             builder.Services.AddTransient<DetailViewModel>();
+            builder.Services.AddTransient<EditTransactionViewModel>(); // Added EditTransactionViewModel
+
+            // Register pages
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddTransient<AddTransactionPage>();
+            builder.Services.AddTransient<AddBudgetPage>();
+            builder.Services.AddTransient<ReportsPage>();
+            builder.Services.AddTransient<DetailPage>();
+            builder.Services.AddTransient<EditTransactionPage>(); // Added EditTransactionPage
 
 #if DEBUG
             builder.Logging.AddDebug();

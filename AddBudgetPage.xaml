@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PersonalFinanceTracker.ViewModels"
+             x:Class="PersonalFinanceTracker.Views.AddBudgetPage"
+             x:DataType="vm:AddBudgetViewModel"
+             Title="Add Budget"
+             BackgroundColor="{DynamicResource CurrentBackground}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="{DynamicResource CurrentBoxColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource CurrentTextColor}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*,*"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
+        <Label Grid.Row="1" Grid.ColumnSpan="2" 
+               Text="Category" 
+               FontAttributes="Bold" 
+               TextColor="{DynamicResource CurrentTextColor}" />
+        <Picker Grid.Row="2" Grid.ColumnSpan="2" 
+                ItemsSource="{Binding Categories}" 
+                SelectedItem="{Binding Budget.Category, Mode=TwoWay}" 
+                Title="Select category" 
+                TextColor="White"
+                BackgroundColor="{DynamicResource CurrentBoxColor}" />
+        <Label Grid.Row="3" Grid.ColumnSpan="2" 
+               Text="Amount" 
+               FontAttributes="Bold" 
+               TextColor="{DynamicResource CurrentTextColor}" />
+        <Entry Grid.Row="4" Grid.ColumnSpan="2" 
+               Text="{Binding Budget.Amount, Mode=TwoWay}" 
+               Keyboard="Numeric" 
+               Placeholder="Enter budget amount" 
+               BackgroundColor="{DynamicResource CurrentBoxColor}"
+               TextColor="{DynamicResource CurrentTextColor}" />
+        <Label Grid.Row="5" Grid.ColumnSpan="2" 
+               Text="Month" 
+               FontAttributes="Bold" 
+               TextColor="{DynamicResource CurrentTextColor}" />
+        <DatePicker Grid.Row="6" Grid.ColumnSpan="2" 
+                    Date="{Binding Budget.Month, Mode=TwoWay}" 
+                    Format="MM/dd/yyyy" 
+                    TextColor="{StaticResource Primary}" />
+        <HorizontalStackLayout Grid.Row="7" Grid.ColumnSpan="2" 
+                             Spacing="10" 
+                             Padding="10" 
+                             HorizontalOptions="Center">
+            <Button Text="Save" 
+                    Command="{Binding SaveCommand}" 
+                    Margin="0,0,5,0"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="{DynamicResource CurrentTextColor}"
+                    FontSize="14"
+                    CornerRadius="5"
+                    Padding="10,5" />
+            <Button Text="Cancel" 
+                    Command="{Binding CancelCommand}" 
+                    Margin="5,0,0,0"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="{DynamicResource CurrentTextColor}"
+                    FontSize="14"
+                    CornerRadius="5"
+                    Padding="10,5" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

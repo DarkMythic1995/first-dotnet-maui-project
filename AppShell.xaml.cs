@@ -30,6 +30,7 @@ namespace PersonalFinanceTracker
             Routing.RegisterRoute("AddBudgetPage", typeof(AddBudgetPage));
             Routing.RegisterRoute("ReportsPage", typeof(ReportsPage));
             Routing.RegisterRoute("DetailPage", typeof(DetailPage));
+            Routing.RegisterRoute("EditTransactionPage", typeof(EditTransactionPage)); // Added route
         }
     }
 }

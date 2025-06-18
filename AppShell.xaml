@@ -19,4 +19,7 @@
     <ShellContent Title="Details"
                   ContentTemplate="{DataTemplate views:DetailPage}"
                   Route="DetailPage" />
+    <ShellContent Title="Edit Transaction"
+                  ContentTemplate="{DataTemplate views:EditTransactionPage}"
+                  Route="EditTransactionPage" />
 </Shell>
