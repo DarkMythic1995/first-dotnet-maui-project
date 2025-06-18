@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:PersonalFinanceTracker.Converters"
+             x:Class="PersonalFinanceTracker.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Converters -->
+            <converters:IncomeToColorConverter x:Key="IncomeToColorConverter" />
+            <converters:ProgressToColorConverter x:Key="ProgressToColorConverter" />
+            <converters:ProgressConverter x:Key="ProgressConverter" />
+
+            <!-- Theme Colors -->
+            <Color x:Key="BgLight">#E6F0FA</Color>
+            <!-- Light blue background -->
+            <Color x:Key="BgDark">#1D1A31</Color>
+            <!-- Dark background option -->
+            <Color x:Key="CurrentBackground">#E6F0FA</Color>
+            <!-- Default to light -->
+            <Color x:Key="TextLight">Black</Color>
+            <Color x:Key="TextDark">White</Color>
+            <Color x:Key="CurrentTextColor">Black</Color>
+            <!-- Default to light text -->
+            <Color x:Key="Primary">#8B8BAE</Color>
+            <!-- Vibrant blue for accents -->
+            <Color x:Key="Accent">#32CD32</Color>
+            <!-- Green for positive transactions -->
+            <Color x:Key="NightBoxColor">#2A2D43</Color>
+            <!-- Updated to darker blue-gray for night mode boxes -->
+            <Color x:Key="CurrentBoxColor">#E6F0FA</Color>
+            <!-- Default to light box color -->
+
+            <!-- Dynamic resource switching (handled in code-behind) -->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
